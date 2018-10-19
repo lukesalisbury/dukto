@@ -1,0 +1,78 @@
+/* DUKTO - A simple, fast and multi-platform file transfer tool for LAN users
+ * Copyright (C) 2011 Emanuele Colombo
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */
+
+import QtQuick 2.0
+
+Item {
+	id: item1
+
+	Rectangle {
+		x: 27
+		y: 15
+		width: 64
+		height: 64
+		color: theme.color2
+		SpecialGradient {}
+		Image {
+			source: "res/DuktoMetroIcon.png"
+			anchors.fill: parent
+		}
+	}
+
+	SmoothText {
+		y: 80
+		x: 22
+		font.pixelSize: 100
+		text: "Dukto R6.1"
+		color: theme.color4
+	}
+	SmoothText {
+		id: creator
+		x: 25
+		y: 70 + 75
+		font.pixelSize: 38
+		text: "Created by Emanuele Colombo.\nUpdated by Luke Salisbury"
+		color: theme.color5
+	}
+	SmoothText {
+		x: 25
+		font.pixelSize: 32
+		text: "Website: https://github.com/lukesalisbury/dukto"
+		anchors.bottom: creator.bottom
+		anchors.bottomMargin: 0
+		color: theme.color5
+	}
+
+	SText {
+		anchors.right: parent.right
+		anchors.rightMargin: 40
+		anchors.left: parent.left
+		anchors.leftMargin: 25
+		y: 240
+		font.pixelSize: 12
+		color: theme.color5
+		wrapMode: "WordWrap"
+		text: "This application and it's source code are released freely as open source project.<br>The original author website: www.msec.it"
+
+	}
+}
+
+/*##^## Designer {
+	D{i:0;autoSize:true;height:480;width:640}
+}
+ ##^##*/
